@@ -18,12 +18,10 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "http2.mlstatic.com" },
       { protocol: "https", hostname: "www.multimixmoveis.com" },
       { protocol: "https", hostname: "images.tcdn.com.br" },
+      { protocol: "https", hostname: "kimi-web-img.moonshot.cn" },
     ],
   },
   trailingSlash: true,
-  turbopack: {
-    root: "..",
-  },
 };
 
 export default nextConfig;
