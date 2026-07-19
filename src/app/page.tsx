@@ -300,6 +300,11 @@ export default function HomePage() {
                   <div className="text-sm text-gray-500">Raio de entrega</div>
                 </div>
               </div>
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <p className="text-center text-gray-400 text-xs uppercase tracking-[0.3em] font-light">
+                  Curadoria João Batista
+                </p>
+              </div>
             </div>
             <div className="relative section-reveal">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden">

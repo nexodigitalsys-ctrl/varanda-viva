@@ -78,6 +78,14 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="flex justify-center items-center gap-2 mb-4">
+          <div className="h-px w-12 bg-gray-600" />
+          <span className="text-gray-500 text-xs uppercase tracking-[0.3em] font-light">
+            Curadoria João Batista
+          </span>
+          <div className="h-px w-12 bg-gray-600" />
+        </div>
+
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">© 2026 Varanda Viva Design. Todos os direitos reservados.</p>
           <div className="flex gap-4">
