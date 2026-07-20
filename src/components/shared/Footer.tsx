@@ -9,8 +9,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
-            <div className="mb-6">
-              <Image src="/images/logo_joao.png" alt="Mendes Design" width={140} height={56} className="h-14 w-auto" />
+            <div className="flex items-center gap-3 mb-6">
+              <Image src="/images/logo_md_joao.png" alt="MD" width={40} height={40} className="h-10 w-10" />
+              <div>
+                <span className="font-serif text-lg font-bold text-text tracking-[0.15em]">MENDES</span>
+                <span className="block text-[10px] uppercase tracking-[0.3em] text-gold font-medium">Design</span>
+              </div>
             </div>
             <p className="text-text-secondary text-sm leading-relaxed">
               Móveis para Áreas Externas. Reformas e revitalização com qualidade e sofisticação.

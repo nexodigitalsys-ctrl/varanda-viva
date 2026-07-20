@@ -46,8 +46,10 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="h-12 w-auto group-hover:scale-105 transition-transform">
-                <Image src="/images/logo_joao.png" alt="Mendes Design" width={120} height={48} className="h-12 w-auto" priority />
+              <Image src="/images/logo_md_joao.png" alt="MD" width={40} height={40} className="h-10 w-10 group-hover:scale-105 transition-transform" priority />
+              <div>
+                <span className="font-serif text-lg font-bold text-text tracking-[0.15em]">MENDES</span>
+                <span className="block text-[10px] uppercase tracking-[0.3em] text-gold font-medium">Design</span>
               </div>
             </Link>
 
@@ -102,8 +104,10 @@ export default function Header() {
       >
         <div className="flex items-center justify-between px-6 h-20 border-b border-white/10 shrink-0">
           <Link href="/" className="flex items-center gap-3 group" onClick={close}>
-            <div className="h-10 w-auto group-hover:scale-105 transition-transform">
-              <Image src="/images/logo_joao.png" alt="Mendes Design" width={100} height={40} className="h-10 w-auto" />
+            <Image src="/images/logo_md_joao.png" alt="MD" width={36} height={36} className="h-9 w-9 group-hover:scale-105 transition-transform" />
+            <div>
+              <span className="font-serif text-lg font-bold text-text tracking-[0.15em]">MENDES</span>
+              <span className="block text-[10px] uppercase tracking-[0.3em] text-gold font-medium">Design</span>
             </div>
           </Link>
           <button
