@@ -258,18 +258,13 @@ export const BLOG_POSTS = [
     excerpt: "Entenda as diferenças entre os materiais mais populares para móveis de área externa.",
     date: "2026-07-10",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-  },
-  {
-    id: "3",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
     slug: "10-ideias-decorar-varanda-gourmet",
     title: "10 ideias para decorar sua varanda gourmet",
     excerpt: "Inspire-se com tendências de design para transformar sua varanda em um espaço convidativo.",
     date: "2026-07-05",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
-  },
-];
+    image: "https://images.unsplash.com/photo-1600210491892-03d8c6b1c6c8?w=600&q=80",
 
 export const COLORS = [
   { name: "Off-white", hex: "#F5F5F0" },
