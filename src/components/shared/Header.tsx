@@ -102,7 +102,7 @@ export default function Header() {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm bg-white/80 backdrop-blur-xl border-l border-white/40 shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
