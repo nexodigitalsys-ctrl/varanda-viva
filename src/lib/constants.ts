@@ -1,4 +1,44 @@
-export const CATEGORIES = [
+export interface Category {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  image: string;
+}
+
+export interface Product {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  price: number;
+  category: string;
+  materials: string[];
+  colors: string[];
+  images: string[];
+  featured: boolean;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  initials: string;
+  city: string;
+  rating: number;
+  text: string;
+}
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  readTime: string;
+  image: string;
+}
+
+export const CATEGORIES: Category[] = [
   {
     id: "1",
     name: "Sofás Externos",
@@ -32,7 +72,7 @@ export const CATEGORIES = [
     name: "Conjuntos",
     slug: "conjuntos",
     description: "Soluções completas para seu espaço",
-    image: "https://kimi-web-img.moonshot.cn/img/modway.com/c333c06813fca1780eaa887d005f69147a928b9f.jpg",
+    image: "https://kimi-web-img.moonshot.cn/img/cdn11.bigcommerce.com/7e6e107392c3f5ed89fc38fed4d94acf2d0fa200.jpg",
   },
   {
     id: "6",
@@ -43,7 +83,7 @@ export const CATEGORIES = [
   },
 ];
 
-export const PRODUCTS = [
+export const PRODUCTS: Product[] = [
   {
     id: "1",
     name: "Sofá Modular Tramado",
@@ -214,7 +254,7 @@ export const PRODUCTS = [
   },
 ];
 
-export const TESTIMONIALS = [
+export const TESTIMONIALS: Testimonial[] = [
   {
     id: "1",
     name: "Mariana F.",
@@ -241,7 +281,7 @@ export const TESTIMONIALS = [
   },
 ];
 
-export const BLOG_POSTS = [
+export const BLOG_POSTS: BlogPost[] = [
   {
     id: "1",
     slug: "como-escolher-moveis-area-externa-uberaba",
@@ -258,7 +298,7 @@ export const BLOG_POSTS = [
     excerpt: "Entenda as diferenças entre os materiais mais populares para móveis de área externa.",
     date: "2026-07-10",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
+    image: "https://kimi-web-img.moonshot.cn/img/modway.com/c333c06813fca1780eaa887d005f69147a928b9f.jpg",
   },
   {
     id: "3",
@@ -267,7 +307,7 @@ export const BLOG_POSTS = [
     excerpt: "Inspire-se com tendências de design para transformar sua varanda em um espaço convidativo.",
     date: "2026-07-05",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1600210491892-03d8c6b1c6c8?w=600&q=80",
+    image: "https://kimi-web-img.moonshot.cn/img/cdn11.bigcommerce.com/7e6e107392c3f5ed89fc38fed4d94acf2d0fa200.jpg",
   },
 ];
 
