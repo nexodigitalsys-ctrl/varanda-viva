@@ -259,6 +259,9 @@ export const BLOG_POSTS = [
     date: "2026-07-10",
     readTime: "4 min",
     image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
+  },
+  {
+    id: "3",
     slug: "10-ideias-decorar-varanda-gourmet",
     title: "10 ideias para decorar sua varanda gourmet",
     excerpt: "Inspire-se com tendências de design para transformar sua varanda em um espaço convidativo.",
