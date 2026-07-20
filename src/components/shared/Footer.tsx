@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const WHATSAPP = "https://wa.me/5534998992309?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento.";
 
@@ -8,14 +9,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center">
-                <span className="font-serif text-sm font-bold text-gold leading-none">MD</span>
-              </div>
-              <div>
-                <span className="font-serif text-lg font-bold text-gold tracking-[0.15em]">MENDES</span>
-                <span className="block text-[10px] uppercase tracking-[0.3em] text-gold-light font-medium">Design</span>
-              </div>
+            <div className="mb-6">
+              <Image src="/images/logo_joao.png" alt="Mendes Design" width={140} height={56} className="h-14 w-auto" />
             </div>
             <p className="text-text-secondary text-sm leading-relaxed">
               Móveis para Áreas Externas. Reformas e revitalização com qualidade e sofisticação.

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -45,12 +46,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center group-hover:scale-105 transition-transform">
-                <span className="font-serif text-sm font-bold text-gold leading-none">MD</span>
-              </div>
-              <div>
-                <span className="font-serif text-lg font-bold text-gold tracking-[0.15em]">MENDES</span>
-                <span className="block text-[10px] uppercase tracking-[0.3em] text-gold-light font-medium">Design</span>
+              <div className="h-12 w-auto group-hover:scale-105 transition-transform">
+                <Image src="/images/logo_joao.png" alt="Mendes Design" width={120} height={48} className="h-12 w-auto" priority />
               </div>
             </Link>
 
@@ -105,12 +102,8 @@ export default function Header() {
       >
         <div className="flex items-center justify-between px-6 h-20 border-b border-white/10 shrink-0">
           <Link href="/" className="flex items-center gap-3 group" onClick={close}>
-            <div className="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center group-hover:scale-105 transition-transform">
-              <span className="font-serif text-sm font-bold text-gold leading-none">MD</span>
-            </div>
-            <div>
-              <span className="font-serif text-lg font-bold text-gold tracking-[0.15em]">MENDES</span>
-              <span className="block text-[10px] uppercase tracking-[0.3em] text-gold-light font-medium">Design</span>
+            <div className="h-10 w-auto group-hover:scale-105 transition-transform">
+              <Image src="/images/logo_joao.png" alt="Mendes Design" width={100} height={40} className="h-10 w-auto" />
             </div>
           </Link>
           <button
