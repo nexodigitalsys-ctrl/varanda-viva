@@ -258,7 +258,7 @@ export const BLOG_POSTS = [
     excerpt: "Entenda as diferenças entre os materiais mais populares para móveis de área externa.",
     date: "2026-07-10",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1600210491892-03d8c6b1c6c8?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
   },
   {
     id: "3",
