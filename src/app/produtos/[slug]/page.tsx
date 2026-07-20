@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return { title: "Produto não encontrado" };
 
   return {
-    title: `${product.name} | Varanda Viva`,
+    title: `${product.name} | Mendes Design`,
     description: `${product.name} em ${product.materials.join(", ")}. Entrega em Uberaba/MG. Garantia 5 anos. Solicite orçamento!`,
   };
 }

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!category) return { title: "Categoria não encontrada" };
 
   return {
-    title: `${category.name} | Varanda Viva - Uberaba`,
+    title: `${category.name} | Mendes Design - Uberaba`,
     description: `Confira nossa linha de ${category.name.toLowerCase()} para área externa. Móveis em fibra sintética e alumínio. Entrega em Uberaba e região.`,
   };
 }

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return { title: "Artigo não encontrado" };
 
   return {
-    title: `${post.title} | Blog Varanda Viva`,
+    title: `${post.title} | Blog Mendes Design`,
     description: post.excerpt,
   };
 }
@@ -28,17 +28,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="pt-20">
-      <article className="py-24 bg-white">
+      <article className="py-24 bg-card">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-verde font-medium mb-8 hover:text-terracota transition-colors"
+            className="inline-flex items-center gap-2 text-gold font-medium mb-8 hover:text-gold transition-colors"
           >
             <ArrowLeft size={16} />
             Voltar para o blog
           </Link>
 
-          <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+          <div className="flex items-center gap-4 text-sm text-text-secondary mb-4">
             <span className="flex items-center gap-1">
               <Calendar size={14} />
               {post.date}
@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-verde mb-6">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-gold mb-6">
             {post.title}
           </h1>
 
@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             />
           </div>
 
-          <div className="prose prose-lg max-w-none text-gray-700">
+          <div className="prose prose-lg max-w-none text-text-secondary">
             <p className="text-xl leading-relaxed mb-6">{post.excerpt}</p>
             <p className="mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
               officia deserunt mollit anim id est laborum.
             </p>
-            <h2 className="font-serif text-2xl font-bold text-verde mt-8 mb-4">
+            <h2 className="font-serif text-2xl font-bold text-gold mt-8 mb-4">
               Dicas práticas
             </h2>
             <p className="mb-4">

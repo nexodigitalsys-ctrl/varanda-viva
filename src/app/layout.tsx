@@ -13,29 +13,25 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Varanda Viva Design | Móveis para Área Externa em Uberaba",
-  description: "Móveis outdoor de fibra sintética e corda náutica em Uberaba. Design autoral, durabilidade 15+ anos. Entrega no Triângulo Mineiro. Sofás, cadeiras, espreguiçadeiras.",
-  keywords: ["móveis área externa", "móveis outdoor", "fibra sintética", "corda náutica", "Uberaba", "Triângulo Mineiro"],
-  authors: [{ name: "Varanda Viva Design" }],
+  title: "Mendes Design | Móveis para Áreas Externas em Uberaba",
+  description: "Mendes Design — Reformas, revitalização e móveis para áreas externas em Uberaba. Troca de cordas náuticas, reforma em alumínio, revitalização completa. Atendimento em Uberaba e região.",
+  keywords: ["móveis área externa", "reformas", "revitalização", "corda náutica", "alumínio", "Uberaba"],
+  authors: [{ name: "Mendes Design" }],
   openGraph: {
-    title: "Varanda Viva Design | Móveis para Área Externa",
-    description: "Móveis outdoor de fibra sintética e corda náutica em Uberaba",
-    url: "https://varandavivadesign.com.br",
-    siteName: "Varanda Viva Design",
+    title: "Mendes Design | Móveis para Áreas Externas",
+    description: "Reformas e revitalização com qualidade e sofisticação em Uberaba",
+    siteName: "Mendes Design",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Varanda Viva Design",
-    description: "Móveis outdoor de fibra sintética e corda náutica em Uberaba",
+    title: "Mendes Design",
+    description: "Reformas e revitalização com qualidade e sofisticação em Uberaba",
   },
   robots: {
     index: true,
     follow: true,
-  },
-  verification: {
-    google: "seu-código-verificação",
   },
 };
 
@@ -56,17 +52,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "FurnitureStore",
-              name: "Varanda Viva Design",
-              description: "Móveis outdoor de fibra sintética e corda náutica em Uberaba",
-              url: "https://varandavivadesign.com.br",
-              telephone: "+55-34-99999-9999",
-              email: "contato@varandavivadesign.com.br",
+              name: "Mendes Design",
+              description: "Reformas e revitalização de móveis para áreas externas em Uberaba",
+              telephone: "+55-34-99899-2309",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Av. Principal, 1000",
                 addressLocality: "Uberaba",
                 addressRegion: "MG",
-                postalCode: "38000-000",
                 addressCountry: "BR",
               },
               geo: {
@@ -76,16 +68,11 @@ export default function RootLayout({
               },
               openingHours: "Mo-Fr 09:00-18:00,Sa 09:00-13:00",
               priceRange: "$$$",
-              image: "https://varandavivadesign.com.br/og-image.jpg",
-              sameAs: [
-                "https://www.instagram.com/varandaviva",
-                "https://www.facebook.com/varandaviva",
-              ],
             }),
           }}
         />
       </head>
-      <body className="antialiased font-sans">
+      <body className="antialiased font-sans bg-surface text-text">
         <Header />
         <main>{children}</main>
         <Footer />

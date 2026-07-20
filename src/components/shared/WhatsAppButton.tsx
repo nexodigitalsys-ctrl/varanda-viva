@@ -1,8 +1,8 @@
 "use client";
 
 export default function WhatsAppButton() {
-  const phone = "5534999999999";
-  const message = "Olá! Vi o site da Varanda Viva e gostaria de um orçamento.";
+  const phone = "5534998992309";
+  const message = "Olá! Vi o site da Mendes Design e gostaria de um orçamento.";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (

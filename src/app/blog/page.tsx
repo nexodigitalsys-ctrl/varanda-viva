@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/constants";
 
 export const metadata = {
-  title: "Blog | Varanda Viva Design - Dicas para Área Externa",
+  title: "Blog | Mendes Design - Dicas para Área Externa",
   description:
     "Dicas, guias e tendências para decolar sua área externa. Móveis outdoor, fibra sintética e design em Uberaba.",
 };
@@ -12,9 +12,9 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <div className="pt-20">
-      <section className="py-20 bg-verde">
+      <section className="py-20 bg-gold">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-areia text-sm font-semibold uppercase tracking-widest">
+          <span className="text-gold-light text-sm font-semibold uppercase tracking-widest">
             Blog
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -26,16 +26,16 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {BLOG_POSTS.map((post) => (
               <Link
                 key={post.id}
                 href={`/blog/${post.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100"
+                className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-card-border"
               >
-                <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+                <div className="relative aspect-[16/9] overflow-hidden bg-surface">
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -45,7 +45,7 @@ export default function BlogPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                  <div className="flex items-center gap-4 text-sm text-text-secondary mb-3">
                     <span className="flex items-center gap-1">
                       <Calendar size={14} />
                       {post.date}
@@ -55,11 +55,11 @@ export default function BlogPage() {
                       {post.readTime}
                     </span>
                   </div>
-                  <h2 className="font-serif text-xl font-bold text-verde mb-2 group-hover:text-terracota transition-colors">
+                  <h2 className="font-serif text-xl font-bold text-gold mb-2 group-hover:text-gold transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
-                  <span className="inline-flex items-center gap-1 text-terracota font-medium text-sm">
+                  <p className="text-text-secondary text-sm mb-4 line-clamp-2">{post.excerpt}</p>
+                  <span className="inline-flex items-center gap-1 text-gold font-medium text-sm">
                     Ler artigo
                     <ArrowRight size={14} />
                   </span>

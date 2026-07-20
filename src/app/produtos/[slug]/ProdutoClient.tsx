@@ -46,18 +46,18 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
     setSubmitted(true);
   };
 
-  const whatsappUrl = `https://wa.me/5534999999999?text=Olá!%20Tenho%20interesse%20no%20${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/5534998992309?text=Olá!%20Tenho%20interesse%20no%20${encodeURIComponent(
     product.name
   )}%20-%20${encodeURIComponent(selectedColor)}`;
 
   return (
     <div className="pt-20">
-      <section className="py-8 bg-offwhite">
+      <section className="py-8 bg-surface-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-verde">Home</Link>
+          <nav className="flex items-center gap-2 text-sm text-text-secondary">
+            <Link href="/" className="hover:text-gold">Home</Link>
             <span>/</span>
-            <Link href={`/categorias/${product.category}`} className="hover:text-verde">
+            <Link href={`/categorias/${product.category}`} className="hover:text-gold">
               {product.category === "sofas-externos"
                 ? "Sofás Externos"
                 : product.category === "espreguicadeiras"
@@ -65,16 +65,16 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                 : product.category.charAt(0).toUpperCase() + product.category.slice(1)}
             </Link>
             <span>/</span>
-            <span className="text-verde font-medium">{product.name}</span>
+            <span className="text-gold font-medium">{product.name}</span>
           </nav>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-100 mb-4">
+              <div className="relative aspect-square rounded-2xl overflow-hidden bg-surface mb-4">
                 <Image
                   src={product.images[selectedImage]}
                   alt={product.name}
@@ -107,38 +107,38 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
             </div>
 
             <div>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-verde mb-4">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-gold mb-4">
                 {product.name}
               </h1>
-              <p className="text-gray-600 leading-relaxed mb-6">{product.description}</p>
-              <div className="text-3xl font-bold text-terracota mb-6">
+              <p className="text-text-secondary leading-relaxed mb-6">{product.description}</p>
+              <div className="text-3xl font-bold text-gold mb-6">
                 {formatPrice(product.price)}
               </div>
 
               <div className="mb-6">
-                <h3 className="font-semibold text-verde mb-3">Cores disponíveis</h3>
+                <h3 className="font-semibold text-gold mb-3">Cores disponíveis</h3>
                 <div className="flex gap-3">
                   {product.colors.map((color) => (
                     <button
                       key={color}
                       onClick={() => setSelectedColor(color)}
                       className={`w-10 h-10 rounded-full border-2 transition-all ${
-                        selectedColor === color ? "border-verde scale-110" : "border-gray-200"
+                        selectedColor === color ? "border-verde scale-110" : "border-card-border"
                       }`}
                       style={{ backgroundColor: colorMap[color] || "#ccc" }}
                       title={color}
                     />
                   ))}
                 </div>
-                <p className="text-sm text-gray-500 mt-2">Selecionado: {selectedColor}</p>
+                <p className="text-sm text-text-secondary mt-2">Selecionado: {selectedColor}</p>
               </div>
 
               <div className="mb-6">
-                <h3 className="font-semibold text-verde mb-2">Materiais</h3>
+                <h3 className="font-semibold text-gold mb-2">Materiais</h3>
                 <ul className="space-y-1">
                   {product.materials.map((material) => (
-                    <li key={material} className="flex items-center gap-2 text-gray-600">
-                      <Check size={16} className="text-verde" />
+                    <li key={material} className="flex items-center gap-2 text-text-secondary">
+                      <Check size={16} className="text-gold" />
                       {material}
                     </li>
                   ))}
@@ -150,7 +150,7 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-terracota text-white py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-terracota/90 transition-colors"
+                  className="w-full bg-gold text-black py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-gold/90 transition-colors"
                 >
                   <MessageCircle size={20} />
                   Pedir orçamento no WhatsApp
@@ -158,19 +158,19 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                 <Button
                   onClick={() => setShowForm(!showForm)}
                   variant="outline"
-                  className="w-full py-4 rounded-full font-semibold border-2 border-verde text-verde hover:bg-verde hover:text-white"
+                  className="w-full py-4 rounded-full font-semibold border-2 border-verde text-gold hover:bg-gold hover:text-black"
                 >
                   {showForm ? "Fechar formulário" : "Solicitar orçamento por email"}
                 </Button>
               </div>
 
               {showForm && (
-                <div className="mt-6 p-6 bg-offwhite rounded-2xl">
+                <div className="mt-6 p-6 bg-surface-alt rounded-2xl">
                   {submitted ? (
                     <div className="text-center py-4">
-                      <Check size={48} className="mx-auto text-verde mb-2" />
-                      <h3 className="font-semibold text-verde">Orçamento enviado!</h3>
-                      <p className="text-gray-600">Entraremos em contato em breve.</p>
+                      <Check size={48} className="mx-auto text-gold mb-2" />
+                      <h3 className="font-semibold text-gold">Orçamento enviado!</h3>
+                      <p className="text-text-secondary">Entraremos em contato em breve.</p>
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-4">
@@ -199,7 +199,7 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                         <Label htmlFor="telefone">Telefone</Label>
                         <Input
                           id="telefone"
-                          placeholder="(34) 99999-9999"
+                          placeholder="(34) 99899-2309"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           required
@@ -227,7 +227,7 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                       </div>
                       <Button
                         type="submit"
-                        className="w-full bg-verde hover:bg-verde/90 text-white py-3 rounded-full"
+                        className="w-full bg-gold hover:bg-gold/90 text-black py-3 rounded-full"
                       >
                         Enviar orçamento
                       </Button>
@@ -241,9 +241,9 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
       </section>
 
       {relatedProducts.length > 0 && (
-        <section className="py-16 bg-offwhite">
+        <section className="py-16 bg-surface-alt">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-serif text-2xl font-bold text-verde mb-8">
+            <h2 className="font-serif text-2xl font-bold text-gold mb-8">
               Produtos relacionados
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -251,9 +251,9 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                 <Link
                   key={p.id}
                   href={`/produtos/${p.slug}`}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                  className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
                 >
-                  <div className="relative aspect-square overflow-hidden bg-gray-100">
+                  <div className="relative aspect-square overflow-hidden bg-surface">
                     <Image
                       src={p.images[0]}
                       alt={p.name}
@@ -263,8 +263,8 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold text-verde mb-1">{p.name}</h3>
-                    <p className="text-terracota font-bold">{formatPrice(p.price)}</p>
+                    <h3 className="font-semibold text-gold mb-1">{p.name}</h3>
+                    <p className="text-gold font-bold">{formatPrice(p.price)}</p>
                   </div>
                 </Link>
               ))}
@@ -273,28 +273,28 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
         </section>
       )}
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-2xl font-bold text-verde mb-8 text-center">
+          <h2 className="font-serif text-2xl font-bold text-gold mb-8 text-center">
             Perguntas sobre este produto
           </h2>
           <div className="space-y-4">
-            <div className="bg-offwhite p-6 rounded-2xl">
-              <h3 className="font-semibold text-verde mb-2">Qual o prazo de entrega?</h3>
-              <p className="text-gray-600">
+            <div className="bg-surface-alt p-6 rounded-2xl">
+              <h3 className="font-semibold text-gold mb-2">Qual o prazo de entrega?</h3>
+              <p className="text-text-secondary">
                 O prazo de produção é de 15 a 30 dias úteis. A entrega em Uberaba é feita em até
                 3 dias após a produção.
               </p>
             </div>
-            <div className="bg-offwhite p-6 rounded-2xl">
-              <h3 className="font-semibold text-verde mb-2">Preciso fazer manutenção?</h3>
-              <p className="text-gray-600">
+            <div className="bg-surface-alt p-6 rounded-2xl">
+              <h3 className="font-semibold text-gold mb-2">Preciso fazer manutenção?</h3>
+              <p className="text-text-secondary">
                 A manutenção é mínima. Recomendamos limpar com água e sabão neutro a cada 3 meses.
               </p>
             </div>
-            <div className="bg-offwhite p-6 rounded-2xl">
-              <h3 className="font-semibold text-verde mb-2">Posso ver pessoalmente?</h3>
-              <p className="text-gray-600">
+            <div className="bg-surface-alt p-6 rounded-2xl">
+              <h3 className="font-semibold text-gold mb-2">Posso ver pessoalmente?</h3>
+              <p className="text-text-secondary">
                 Sim! Visite nosso showroom em Uberaba. Agende pelo WhatsApp.
               </p>
             </div>

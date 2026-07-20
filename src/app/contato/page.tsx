@@ -24,9 +24,9 @@ export default function ContatoPage() {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-verde">
+      <section className="py-20 bg-gold">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-areia text-sm font-semibold uppercase tracking-widest">
+          <span className="text-gold-light text-sm font-semibold uppercase tracking-widest">
             Contato
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mt-4 mb-6">
@@ -39,32 +39,32 @@ export default function ContatoPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="font-serif text-3xl font-bold text-verde mb-8">
+              <h2 className="font-serif text-3xl font-bold text-gold mb-8">
                 Fale conosco
               </h2>
 
               <div className="space-y-6 mb-10">
                 <a
-                  href="https://wa.me/5534999999999?text=Olá!%20Gostaria%20de%20um%20orçamento."
+                  href="https://wa.me/5534998992309?text=Olá!%20Gostaria%20de%20um%20orçamento."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-offwhite rounded-2xl hover:shadow-md transition-shadow"
+                  className="flex items-center gap-4 p-4 bg-surface-alt rounded-2xl hover:shadow-md transition-shadow"
                 >
                   <div className="w-12 h-12 bg-[#25D366] rounded-xl flex items-center justify-center">
                     <MessageCircle size={24} className="text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-verde">WhatsApp</div>
-                    <div className="text-gray-500 text-sm">(34) 99999-9999</div>
+                    <div className="font-semibold text-gold">WhatsApp</div>
+                    <div className="text-text-secondary text-sm">(34) 99899-2309</div>
                   </div>
                 </a>
 
-                <div className="flex items-center gap-4 p-4 bg-offwhite rounded-2xl">
-                  <div className="w-12 h-12 bg-verde/10 rounded-xl flex items-center justify-center">
+                <div className="flex items-center gap-4 p-4 bg-surface-alt rounded-2xl">
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -78,13 +78,13 @@ export default function ContatoPage() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-verde">Email</div>
-                    <div className="text-gray-500 text-sm">contato@varandavivadesign.com.br</div>
+                    <div className="font-semibold text-gold">Email</div>
+                    <div className="text-text-secondary text-sm">contato@mendesdesign.com.br</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-offwhite rounded-2xl">
-                  <div className="w-12 h-12 bg-verde/10 rounded-xl flex items-center justify-center">
+                <div className="flex items-center gap-4 p-4 bg-surface-alt rounded-2xl">
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center">
                     <svg
                       width="24"
                       height="24"
@@ -98,15 +98,15 @@ export default function ContatoPage() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-verde">Endereço</div>
-                    <div className="text-gray-500 text-sm">Uberaba, MG</div>
+                    <div className="font-semibold text-gold">Endereço</div>
+                    <div className="text-text-secondary text-sm">Uberaba, MG</div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-offwhite rounded-2xl">
-                <h3 className="font-semibold text-verde mb-2">Horário de atendimento</h3>
-                <p className="text-gray-600 text-sm">
+              <div className="p-6 bg-surface-alt rounded-2xl">
+                <h3 className="font-semibold text-gold mb-2">Horário de atendimento</h3>
+                <p className="text-text-secondary text-sm">
                   Segunda a sexta: 09h às 18h
                   <br />
                   Sábado: 09h às 13h
@@ -115,17 +115,17 @@ export default function ContatoPage() {
             </div>
 
             <div>
-              <h2 className="font-serif text-3xl font-bold text-verde mb-8">
+              <h2 className="font-serif text-3xl font-bold text-gold mb-8">
                 Solicite seu orçamento
               </h2>
 
               {submitted ? (
-                <div className="text-center py-16 bg-offwhite rounded-2xl">
-                  <Send size={48} className="mx-auto text-verde mb-4" />
-                  <h3 className="font-serif text-2xl font-bold text-verde mb-2">
+                <div className="text-center py-16 bg-surface-alt rounded-2xl">
+                  <Send size={48} className="mx-auto text-gold mb-4" />
+                  <h3 className="font-serif text-2xl font-bold text-gold mb-2">
                     Mensagem enviada!
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-text-secondary">
                     Entraremos em contato em breve. Obrigado!
                   </p>
                 </div>
@@ -157,7 +157,7 @@ export default function ContatoPage() {
                       <Label htmlFor="telefone">Telefone *</Label>
                       <Input
                         id="telefone"
-                        placeholder="(34) 99999-9999"
+                        placeholder="(34) 99899-2309"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         required
@@ -187,7 +187,7 @@ export default function ContatoPage() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-terracota hover:bg-terracota/90 text-white py-4 rounded-full font-semibold text-lg"
+                    className="w-full bg-gold hover:bg-gold/90 text-white py-4 rounded-full font-semibold text-lg"
                   >
                     <Send size={18} />
                     Enviar mensagem
