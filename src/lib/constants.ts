@@ -265,6 +265,8 @@ export const BLOG_POSTS = [
     date: "2026-07-05",
     readTime: "6 min",
     image: "https://images.unsplash.com/photo-1600210491892-03d8c6b1c6c8?w=600&q=80",
+  },
+];
 
 export const COLORS = [
   { name: "Off-white", hex: "#F5F5F0" },
