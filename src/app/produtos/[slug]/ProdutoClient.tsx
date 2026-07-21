@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { formatPrice } from "@/lib/utils";
 import type { Product } from "@/lib/supabase";
 
 interface ProdutoClientProps {
@@ -111,9 +110,7 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                 {product.name}
               </h1>
               <p className="text-text-secondary leading-relaxed mb-6">{product.description}</p>
-              <div className="text-3xl font-bold text-gold mb-6">
-                {formatPrice(product.price)}
-              </div>
+              <p className="text-gold text-lg mb-6">Preço sob consulta</p>
 
               <div className="mb-6">
                 <h3 className="font-semibold text-gold mb-3">Cores disponíveis</h3>
@@ -264,7 +261,7 @@ export default function ProdutoClient({ product, relatedProducts }: ProdutoClien
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-gold mb-1">{p.name}</h3>
-                    <p className="text-gold font-bold">{formatPrice(p.price)}</p>
+                    <p className="text-gold font-semibold text-sm">Orçar</p>
                   </div>
                 </Link>
               ))}

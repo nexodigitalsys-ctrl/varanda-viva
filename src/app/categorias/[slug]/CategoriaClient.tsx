@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Filter } from "lucide-react";
-import { formatPrice } from "@/lib/utils";
 import type { Product } from "@/lib/supabase";
 
 interface Category {
@@ -104,7 +103,7 @@ export default function CategoriaClient({ category, products }: CategoriaClientP
                       })}
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gold font-bold text-lg">{formatPrice(product.price)}</span>
+                      <span className="text-gold font-semibold text-sm">Orçar</span>
                       <span className="text-gold text-sm font-medium flex items-center gap-1">Ver detalhes <ArrowRight size={14} /></span>
                     </div>
                   </div>

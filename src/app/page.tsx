@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Shield, Check, MapPin, Star, Layers, FileCheck, Wrench, Paintbrush, RefreshCw } from "lucide-react";
 import { CATEGORIES, PRODUCTS, TESTIMONIALS } from "@/lib/constants";
-import { formatPrice } from "@/lib/utils";
 
 const WHATSAPP = "https://wa.me/5534998992309?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento.";
 
@@ -242,7 +241,7 @@ export default function HomePage() {
                     })}
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gold font-bold text-lg">{formatPrice(product.price)}</span>
+                    <span className="text-gold font-semibold text-sm">Orçar</span>
                     <Link href={`/produtos/${product.slug}`}
                       className="bg-gold text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-gold-hover transition-colors">
                       Orçar
