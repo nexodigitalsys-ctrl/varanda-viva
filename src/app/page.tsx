@@ -31,7 +31,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(10,10,10,0.92) 0%, rgba(20,20,20,0.85) 100%), url('https://kimi-web-img.moonshot.cn/img/sc04.alicdn.com/a9af27044f3f2cd918ddf8ac8f8a363b71da8f3e.jpg')`,
+            backgroundImage: `linear-gradient(135deg, rgba(10,10,10,0.5) 0%, rgba(20,20,20,0.4) 100%), url('https://kimi-web-img.moonshot.cn/img/sc04.alicdn.com/a9af27044f3f2cd918ddf8ac8f8a363b71da8f3e.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
