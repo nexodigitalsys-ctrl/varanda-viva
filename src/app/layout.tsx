@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import ThemeProvider from "@/components/shared/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
@@ -73,10 +74,12 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased font-sans bg-surface text-text">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <ThemeProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
       </body>
     </html>
   );

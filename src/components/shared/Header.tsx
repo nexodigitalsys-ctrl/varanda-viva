@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 const navLinks = [
   { href: "/#categorias", label: "Categorias" },
@@ -17,6 +18,7 @@ const navLinks = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { theme, toggle } = useTheme();
 
   const close = useCallback(() => setMobileOpen(false), []);
 
@@ -66,6 +68,17 @@ export default function Header() {
             </nav>
 
             <div className="flex items-center gap-4">
+              <button
+                onClick={toggle}
+                className="p-2 rounded-full hover:bg-white/10 transition-colors"
+                aria-label={theme === "dark" ? "Mudar para modo claro" : "Mudar para modo escuro"}
+              >
+                {theme === "dark" ? (
+                  <Sun size={20} className="text-gold" />
+                ) : (
+                  <Moon size={20} className="text-gold" />
+                )}
+              </button>
               <a
                 href="https://wa.me/5534998992309?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento."
                 target="_blank"
@@ -138,6 +151,22 @@ export default function Header() {
         </nav>
 
         <div className="px-6 pb-6 pt-4 border-t border-white/10 shrink-0">
+          <button
+            onClick={toggle}
+            className="w-full flex items-center justify-center gap-2 py-3 mb-3 rounded-full border border-white/10 hover:bg-white/5 transition-colors"
+          >
+            {theme === "dark" ? (
+              <>
+                <Sun size={18} className="text-gold" />
+                <span className="text-sm text-text-secondary">Modo Claro</span>
+              </>
+            ) : (
+              <>
+                <Moon size={18} className="text-gold" />
+                <span className="text-sm text-text-secondary">Modo Escuro</span>
+              </>
+            )}
+          </button>
           <a
             href="https://wa.me/5534998992309?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento."
             target="_blank"
